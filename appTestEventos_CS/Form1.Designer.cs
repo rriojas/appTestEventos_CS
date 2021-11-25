@@ -29,8 +29,10 @@ namespace appTestEventos_CS
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
       this.picFrame = new System.Windows.Forms.PictureBox();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.picFrame)).BeginInit();
       this.SuspendLayout();
       // 
@@ -43,6 +45,11 @@ namespace appTestEventos_CS
       this.picFrame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
       this.picFrame.TabIndex = 0;
       this.picFrame.TabStop = false;
+      // 
+      // timer1
+      // 
+      this.timer1.Interval = 1000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // Form1
       // 
@@ -63,6 +70,7 @@ namespace appTestEventos_CS
     #endregion
 
     private System.Windows.Forms.PictureBox picFrame;
+    private System.Windows.Forms.Timer timer1;
   }
 }
 
